@@ -57,6 +57,8 @@ fi;
 if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
     source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
 fi
+GIT_PROMPT_ONLY_IN_REPO=1
+GIT_PROMPT_THEME=Solarized
 
 # homebrew completion
 source `brew --repository`/Library/Contributions/brew_bash_completion.sh
