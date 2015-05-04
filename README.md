@@ -1,4 +1,4 @@
-# Xinjiang's dotfiled
+# Xinjiang's dotfiles
 
 The dotfiles are based on paulirish (https://github.com/paulirish/dotfiles/)
 
