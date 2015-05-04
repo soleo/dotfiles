@@ -13,3 +13,5 @@ export LANG="en_US"
 # here's LS_COLORS
 # github.com/trapd00r/LS_COLORS
 eval $(gdircolors -b ~/.dircolors)
+
+export PATH="/usr/local/sbin:$PATH"

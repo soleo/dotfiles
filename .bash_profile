@@ -54,6 +54,10 @@ elif [ -f /etc/bash_completion ]; then
     source /etc/bash_completion;
 fi;
 
+if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+    source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+fi
+
 # homebrew completion
 source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 
@@ -92,4 +96,4 @@ source ~/code/z/z.sh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-export PATH="/usr/local/sbin:$PATH"
+

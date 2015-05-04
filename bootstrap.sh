@@ -59,10 +59,11 @@ echo $BASH_VERSION # should be 4.x not the old 3.2.X
 #sh osx
 
 # Install oh-my-zsh now
-curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 # Install antigen
-curl https://raw.github.com/zsh-users/antigen/master/antigen.zsh > antigen.zsh
-source antigen.zsh
+git clone https://github.com/zsh-users/antigen.git ~/code/antigen
+
+
 
 
 # symlinks!

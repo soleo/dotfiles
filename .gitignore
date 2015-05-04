@@ -24,3 +24,6 @@ Thumbs.db
 
 # Compiled Python files
 *.pyc
+
+*.sublime-project
+*.sublime-workspace
