@@ -27,6 +27,8 @@ brew cask install imagealpha
 brew cask install imageoptim
 brew cask install sourcetree
 brew cask install asepsis 
+brew cask install virtualbox
+brew cask install p4merge
 
 # fun
 brew cask install limechat
@@ -47,8 +49,12 @@ brew cask install keycastr
 brew cask install sketchup
 
 
-# Not on cask but I want regardless.
-
-# 3Hub
-# File Multi Tool 5
-# Phosphor
+# Install fonts.
+brew tap caskroom/fonts
+fonts=(
+    font-source-code-pro
+    font-roboto
+    font-source-code-pro-for-powerline
+)
+echo "Installing fonts..."
+brew cask install ${fonts[@]}

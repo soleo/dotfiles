@@ -1,3 +1,6 @@
+[user]
+	name = Xinjiang Shao
+	email = shaoxinjiang@gmail.com
 [alias]
 	c = commit -am
 	up = pull
@@ -21,29 +24,33 @@
 		fi \
 	}; f"
 
-
+[core]
+	excludesfile = ~/.gitignore_global
+	attributesfile = ~/.gitattributes
 
 [color]
-	ui = always
-
-[core]
-	excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
+  ui = auto
+  branch = auto
+  diff = auto
+  status = auto
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+  current = yellow black
+  local = yellow
+  remote = magenta
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+  meta = yellow bold
+  frag = magenta bold
+  old = red reverse
+  new = green reverse
+  whitespace = white reverse
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+  added = yellow
+  changed = green
+  untracked = cyan reverse
+  branch = magenta
+
 [merge]
-    tool = opendiff
+	tool = p4mergetool
 
 
 # rewrites
@@ -67,10 +74,18 @@
   insteadOf = "git://github.com/soleo/"
 [help]
 	autocorrect = 1
-
 # push easily. http://stackoverflow.com/a/23918418/89484
 [push]
-	default = current
-[user]
-	name = Xinjiang Shao
-	email = shaoxinjiang@gmail.com
+	default = simple
+
+[difftool "sourcetree"]
+	cmd = ~/Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
+	path = 
+[mergetool "sourcetree"]
+	cmd =~/Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
+	trustexitcode = true
+[mergetool "p4mergetool"]
+	trustExitCode = false
+	cmd = ~/Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
+[difftool "p4mergetool"]
+	cmd = ~/Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
