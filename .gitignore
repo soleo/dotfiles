@@ -6,8 +6,7 @@
 
 # git credential file 
 .gitconfig.local
-
-
+.log
 
 
 # Folder view configuration files
