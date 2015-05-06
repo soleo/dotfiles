@@ -23,6 +23,10 @@ antigen use oh-my-zsh
 
 # Bundles from the default repo declared above.
 antigen bundles <<EOBUNDLES
+git
+git-flow
+git-extras
+osx
 lein
 pip
 sharat87/autoenv
@@ -51,8 +55,6 @@ EOBUNDLES
 antigen bundle sindresorhus/pure
 
 
-
-
 # Tell antigen that you're done.
 antigen apply
 
@@ -63,3 +65,16 @@ source ~/.bash_profile
 # Automatically list directory contents on `cd`.
 auto-ls () { ls; }
 chpwd_functions=( auto-ls $chpwd_functions )
+# Setup zsh-autosuggestions
+source /Users/xinjiang/.zsh-autosuggestions/autosuggestions.zsh
+
+# Enable autosuggestions automatically
+zle-line-init() {
+    zle autosuggest-start
+}
+
+zle -N zle-line-init
+
+# use ctrl+t to toggle autosuggestions(hopefully this wont be needed as
+# zsh-autosuggestions is designed to be unobtrusive)
+bindkey '^T' autosuggest-toggle

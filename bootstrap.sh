@@ -64,7 +64,8 @@ curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/in
 # Install antigen
 git clone https://github.com/zsh-users/antigen.git ~/code/antigen
 
-
+# install teamcil for managing tmux
+sudo gem install teamocil
 
 
 # symlinks!
