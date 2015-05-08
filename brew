@@ -61,7 +61,8 @@ brew install zsh
 brew install git-flow
 brew install tmux
 
-#brew install android-platform-tools
+# Install Docker
+brew install docker boot2docker
 
 # Remove outdated versions from the cellar
 brew cleanup
