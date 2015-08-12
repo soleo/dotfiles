@@ -28,6 +28,7 @@ brew cask install imageoptim
 #brew cask install sourcetree
 brew cask install asepsis 
 brew cask install virtualbox
+brew cask install vagrant
 brew cask install p4merge
 
 # fun

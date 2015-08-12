@@ -73,6 +73,11 @@ git clone git://github.com/tarruda/zsh-autosuggestions ~/.zsh-autosuggestions
 sudo gem install cocoapods
 sudo gem install fastlane --verbose
 
+
+# Install Tools for Automation Deployment
+sudo easy_install pip
+sudo pip install ansible
+
 # symlinks!
 #   put/move git credentials into ~/.gitconfig.local
 #   http://stackoverflow.com/a/13615531/89484
