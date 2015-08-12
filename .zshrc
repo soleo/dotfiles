@@ -2,6 +2,7 @@
 SAVEHIST=100000
 bindkey -v
 # End of lines configured by zsh-newuser-install
+ZSH_THEME="pure"
 # The following lines were added by compinstall
 zstyle :compinstall filename '/Users/xinjiang/.zshrc'
 
@@ -52,7 +53,9 @@ trapd00r/zsh-syntax-highlighting-filetypes
 EOBUNDLES
 
 # dont set a theme, because pure does it all
+antigen bundle mafredri/zsh-async
 antigen bundle sindresorhus/pure
+
 
 
 # Tell antigen that you're done.

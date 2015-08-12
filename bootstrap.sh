@@ -63,7 +63,8 @@ echo $BASH_VERSION # should be 4.x not the old 3.2.X
 curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 # Install antigen
 git clone https://github.com/zsh-users/antigen.git ~/code/antigen
-
+# Install Autosuggestion
+git clone git://github.com/tarruda/zsh-autosuggestions ~/.zsh-autosuggestions
 # install teamcil for managing tmux
 #sudo gem install teamocil
 
