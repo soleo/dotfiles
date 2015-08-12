@@ -62,7 +62,7 @@ brew install git-flow
 brew install tmux
 
 # Install Docker
-brew install docker boot2docker
+brew install docker docker-machine
 
 # Remove outdated versions from the cellar
 brew cleanup
