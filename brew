@@ -64,5 +64,7 @@ brew install tmux
 # Install Docker
 brew install docker docker-machine
 
+brew install awscli
+
 # Remove outdated versions from the cellar
 brew cleanup
