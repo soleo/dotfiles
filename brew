@@ -64,7 +64,10 @@ brew install tmux
 # Install Docker
 brew install docker docker-machine
 
+# Install AWS-CLI, run `aws configure` after this
 brew install awscli
+# Install Xctool for iOS App development
+brew install xctool
 
 # Remove outdated versions from the cellar
 brew cleanup

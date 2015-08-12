@@ -10,7 +10,7 @@ sudo -v
 ## new machine setup.
 ##
 
-
+xcode-select --install
 
 # Homebrew
 #
@@ -68,6 +68,10 @@ git clone git://github.com/tarruda/zsh-autosuggestions ~/.zsh-autosuggestions
 # install teamcil for managing tmux
 #sudo gem install teamocil
 
+# install iOS App Development Tools
+
+sudo gem install cocoapods
+sudo gem install fastlane --verbose
 
 # symlinks!
 #   put/move git credentials into ~/.gitconfig.local
