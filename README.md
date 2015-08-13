@@ -11,7 +11,9 @@ The dotfiles are based on paulirish (https://github.com/paulirish/dotfiles/)
 
 # Theme for XCode
 
+
 - Monokai
+
 
 ```
 cd ~/Library/Developer/Xcode/UserData/ && mkdir FontAndColorThemes
