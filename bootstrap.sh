@@ -72,7 +72,8 @@ git clone git://github.com/tarruda/zsh-autosuggestions ~/.zsh-autosuggestions
 
 sudo gem install cocoapods
 sudo gem install fastlane --verbose
-
+sudo gem install xctool
+sudo gem install xcpretty
 
 # Install Tools for Automation Deployment
 sudo easy_install pip
