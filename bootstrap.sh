@@ -79,6 +79,11 @@ sudo gem install xcpretty
 sudo easy_install pip
 sudo pip install ansible
 
+# Front End Development Toolkit
+npm install -g grunt-cli
+npm install -g bower
+npm install -g yo
+
 # symlinks!
 #   put/move git credentials into ~/.gitconfig.local
 #   http://stackoverflow.com/a/13615531/89484
