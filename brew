@@ -69,5 +69,7 @@ brew install awscli
 # Install Xctool for iOS App development
 brew install xctool
 
+brew install GraphicsMagick
+
 # Remove outdated versions from the cellar
 brew cleanup
