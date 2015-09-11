@@ -68,7 +68,7 @@ brew install docker docker-machine
 brew install awscli
 # Install Xctool for iOS App development
 brew install xctool
-
+brew install tcptrace
 brew install GraphicsMagick
 
 # Remove outdated versions from the cellar
