@@ -16,3 +16,4 @@ import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7
 - Markdown Preview
 - SFTP
 - Dotfiles Syntax Highlighting
+- SublimeLinter-jscs

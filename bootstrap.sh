@@ -83,6 +83,7 @@ sudo pip install ansible
 npm install -g grunt-cli
 npm install -g bower
 npm install -g yo
+npm install -g jscs
 
 # symlinks!
 #   put/move git credentials into ~/.gitconfig.local
