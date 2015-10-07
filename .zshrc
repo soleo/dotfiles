@@ -13,8 +13,8 @@ compinit
 
 fpath=( "$HOME/.zfunctions" $fpath )
 
-autoload -U promptinit && promptinit
-prompt pure
+#autoload -U promptinit && promptinit
+#prompt pure
 
 
 source ~/code/antigen/antigen.zsh
@@ -53,8 +53,8 @@ trapd00r/zsh-syntax-highlighting-filetypes
 EOBUNDLES
 
 # dont set a theme, because pure does it all
-antigen bundle mafredri/zsh-async
-antigen bundle sindresorhus/pure
+#antigen bundle mafredri/zsh-async
+#antigen bundle sindresorhus/pure
 
 
 
@@ -88,17 +88,17 @@ bindkey '^T' autosuggest-toggle
 # powerline shell
 function powerline_precmd() {
       PS1="$(~/powerline-shell.py $? --shell zsh 2> /dev/null)"
-    }
+}
 
-    function install_powerline_precmd() {
-      for s in "${precmd_functions[@]}"; do
-        if [ "$s" = "powerline_precmd" ]; then
-          return
-        fi
-      done
-      precmd_functions+=(powerline_precmd)
-    }
-
-    if [ "$TERM" != "linux" ]; then
-        install_powerline_precmd
+function install_powerline_precmd() {
+  for s in "${precmd_functions[@]}"; do
+    if [ "$s" = "powerline_precmd" ]; then
+      return
     fi
+  done
+  precmd_functions+=(powerline_precmd)
+}
+
+if [ "$TERM" != "linux" ]; then
+    install_powerline_precmd
+fi
