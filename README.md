@@ -5,14 +5,17 @@ The dotfiles are based on paulirish (https://github.com/paulirish/dotfiles/)
 # Tools I use
 
 - Sublime Text 3 
-- Home Brew
+- Homebrew
 - Brew Cask for installing binaries
 - Zsh
+- Oh-my-zsh
+- z
+- iTerm2
+- Powerline Shell (falling in love with it)
 
 # Theme for XCode
 
-
-- Monokai
+- Source Code Pro Powerline
 
 
 ```
