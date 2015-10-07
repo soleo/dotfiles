@@ -2,6 +2,8 @@
 
 The dotfiles are based on paulirish (https://github.com/paulirish/dotfiles/)
 
+![](my-shell.png?raw=true)
+
 # Tools I use
 
 - Sublime Text 3 
