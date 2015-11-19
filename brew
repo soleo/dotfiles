@@ -70,6 +70,8 @@ brew install awscli
 brew install xctool
 brew install tcptrace
 brew install GraphicsMagick
+# install command line recording for terminal sessions
+brew install asciinema
 
 # Remove outdated versions from the cellar
 brew cleanup
