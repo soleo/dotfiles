@@ -71,8 +71,8 @@ git clone git://github.com/tarruda/zsh-autosuggestions ~/.zsh-autosuggestions
 
 
 # install iOS App Development Tools
-
-sudo gem install cocoapods
+# avoid error in el capitan Ref http://stackoverflow.com/questions/30812777/cannot-install-cocoa-pods-after-uninstalling-results-in-error
+sudo gem install -n /usr/local/bin cocoapods
 sudo gem install fastlane --verbose
 sudo gem install xctool
 sudo gem install xcpretty

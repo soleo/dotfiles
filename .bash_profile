@@ -107,8 +107,4 @@ if [ "$TERM" != "linux" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
-# avoid cocoapods install error for Mac OS 10.11 Ref https://github.com/CocoaPods/CocoaPods/issues/3692
-export GEM_HOME=$HOME/Software/ruby
-export PATH=$PATH:$HOME/Software/ruby/bin
-
 source ~/perl5/perlbrew/etc/bashrc

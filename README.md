@@ -2,7 +2,8 @@
 
 The dotfiles are based on paulirish (https://github.com/paulirish/dotfiles/)
 
-![](my-shell.png?raw=true)
+# Shell Demo
+[![asciicast](https://asciinema.org/a/31004.png)](https://asciinema.org/a/31004)
 
 # Tools I use
 
