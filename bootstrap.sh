@@ -76,6 +76,7 @@ sudo gem install -n /usr/local/bin cocoapods
 sudo gem install fastlane --verbose
 sudo gem install xctool
 sudo gem install xcpretty
+sudo gem install git-up
 
 # Install Tools for Automation Deployment
 sudo easy_install pip
