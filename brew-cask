@@ -1,6 +1,6 @@
 #!/bin/bash
-# to maintain cask .... 
-#     brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup` 
+# to maintain cask ....
+#     brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup`
 
 
 # Install native apps
@@ -25,7 +25,7 @@ brew cask install iterm2
 # brew cask install sublime-text // Need sublime-text 3 not 2
 brew cask install imagealpha
 brew cask install imageoptim
-#brew cask install sourcetree 
+#brew cask install sourcetree
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install p4merge
@@ -46,7 +46,7 @@ brew cask install firefox
 #brew cask install disk-inventory-x
 #brew cask install screenflow4 # 4 specifically not 5.
 #brew cask install vlc
-#brew cask install keycastr  
+#brew cask install keycastr
 #brew cask install sketchup
 
 #recording screencask as GIF
@@ -55,9 +55,9 @@ brew cask  install licecap
 # Install fonts.
 brew tap caskroom/fonts
 fonts=(
-    font-source-code-pro
-    font-roboto
-    font-source-code-pro-for-powerline
+	font-source-code-pro
+	font-roboto
+	font-source-code-pro-for-powerline
 )
 echo "Installing fonts..."
 brew cask install ${fonts[@]}

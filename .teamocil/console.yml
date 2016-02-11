@@ -1,7 +1,0 @@
-windows:
-  - name: console
-    root: ~/projects/PrepHero
-    layout: even-horizontal
-    panes:
-        - git status 
-        - ssh phdev

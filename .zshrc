@@ -40,7 +40,7 @@ extract
 atom
 # homebrew something
 brew
-# Tracks your most used directories, based on 'frecency'. 
+# Tracks your most used directories, based on 'frecency'.
 z
 # nicoulaj's moar completion files for zsh
 zsh-users/zsh-completions src
@@ -73,7 +73,7 @@ source /Users/xinjiang/.zsh-autosuggestions/autosuggestions.zsh
 
 # Enable autosuggestions automatically
 zle-line-init() {
-    zle autosuggest-start
+	zle autosuggest-start
 }
 
 zle -N zle-line-init
@@ -87,20 +87,20 @@ bindkey '^T' autosuggest-toggle
 
 # powerline shell
 function powerline_precmd() {
-      PS1="$(~/powerline-shell.py $? --shell zsh 2> /dev/null)"
+	  PS1="$(~/powerline-shell.py $? --shell zsh 2> /dev/null)"
 }
 
 function install_powerline_precmd() {
   for s in "${precmd_functions[@]}"; do
-    if [ "$s" = "powerline_precmd" ]; then
-      return
-    fi
+	if [ "$s" = "powerline_precmd" ]; then
+	  return
+	fi
   done
   precmd_functions+=(powerline_precmd)
 }
 
 if [ "$TERM" != "linux" ]; then
-    install_powerline_precmd
+	install_powerline_precmd
 fi
 
 export NVM_DIR="/Users/xinjiang/.nvm"

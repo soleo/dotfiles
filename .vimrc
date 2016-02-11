@@ -111,304 +111,304 @@ set wrapscan " Searches wrap around end of file
 " FastEscape {{{
 " Speed up transition from modes
 if ! has('gui_running')
-  set ttimeoutlen=10
-  augroup FastEscape
-    autocmd!
-    au InsertEnter * set timeoutlen=0
-    au InsertLeave * set timeoutlen=1000
-  augroup END
+	set ttimeoutlen=10
+	augroup FastEscape
+		autocmd!
+		au InsertEnter * set timeoutlen=0
+		au InsertLeave * set timeoutlen=1000
+	augroup END
 endif
 " }}}
 
 " General {{{
 augroup general_config
-  autocmd!
+	autocmd!
 
-  " Speed up viewport scrolling {{{
-  nnoremap <C-e> 3<C-e>
-  nnoremap <C-y> 3<C-y>
-  " }}}
+	" Speed up viewport scrolling {{{
+	nnoremap <C-e> 3<C-e>
+	nnoremap <C-y> 3<C-y>
+	" }}}
 
-  " Faster split resizing (+,-) {{{
-  if bufwinnr(1)
-    map + <C-W>+
-    map - <C-W>-
-  endif
-  " }}}
+	" Faster split resizing (+,-) {{{
+	if bufwinnr(1)
+		map + <C-W>+
+		map - <C-W>-
+	endif
+	" }}}
 
-  " Better split switching (Ctrl-j, Ctrl-k, Ctrl-h, Ctrl-l) {{{
-  map <C-j> <C-W>j
-  map <C-k> <C-W>k
-  map <C-H> <C-W>h
-  map <C-L> <C-W>l
-  " }}}
+	" Better split switching (Ctrl-j, Ctrl-k, Ctrl-h, Ctrl-l) {{{
+	map <C-j> <C-W>j
+	map <C-k> <C-W>k
+	map <C-H> <C-W>h
+	map <C-L> <C-W>l
+	" }}}
 
-  " Sudo write (,W) {{{
-  noremap <leader>W :w !sudo tee %<CR>
-  " }}}
+	" Sudo write (,W) {{{
+	noremap <leader>W :w !sudo tee %<CR>
+	" }}}
 
-  " Get output of shell commands {{{
-  command! -nargs=* -complete=shellcmd R new | setlocal buftype=nofile bufhidden=hide noswapfile | r !<args>
-  " }}}
+	" Get output of shell commands {{{
+	command! -nargs=* -complete=shellcmd R new | setlocal buftype=nofile bufhidden=hide noswapfile | r !<args>
+	" }}}
 
-  " Remap :W to :w {{{
-  command! W w
-  " }}}
+	" Remap :W to :w {{{
+	command! W w
+	" }}}
 
-  " Better mark jumping (line + col) {{{
-  nnoremap ' `
-  " }}}
+	" Better mark jumping (line + col) {{{
+	nnoremap ' `
+	" }}}
 
-  " Hard to type things {{{
-  iabbrev >> →
-  iabbrev << ←
-  iabbrev ^^ ↑
-  iabbrev VV ↓
-  iabbrev aa λ
-  " }}}
+	" Hard to type things {{{
+	iabbrev >> →
+	iabbrev << ←
+	iabbrev ^^ ↑
+	iabbrev VV ↓
+	iabbrev aa λ
+	" }}}
 
-  " Toggle show tabs and trailing spaces (,c) {{{
-  set lcs=tab:›\ ,trail:·,eol:¬,nbsp:_
-  set fcs=fold:-
-  nnoremap <silent> <leader>c :set nolist!<CR>
-  " }}}
+	" Toggle show tabs and trailing spaces (,c) {{{
+	set lcs=tab:›\ ,trail:·,eol:¬,nbsp:_
+	set fcs=fold:-
+	nnoremap <silent> <leader>c :set nolist!<CR>
+	" }}}
 
-  " Clear last search (,qs) {{{
-  map <silent> <leader>qs <Esc>:noh<CR>
-  " map <silent> <leader>qs <Esc>:let @/ = ""<CR>
-  " }}}
+	" Clear last search (,qs) {{{
+	map <silent> <leader>qs <Esc>:noh<CR>
+	" map <silent> <leader>qs <Esc>:let @/ = ""<CR>
+	" }}}
 
-  " Vim on the iPad {{{
-  if &term == "xterm-ipad"
-    nnoremap <Tab> <Esc>
-    vnoremap <Tab> <Esc>gV
-    onoremap <Tab> <Esc>
-    inoremap <Tab> <Esc>`^
-    inoremap <Leader><Tab> <Tab>
-  endif
-  " }}}
+	" Vim on the iPad {{{
+	if &term == "xterm-ipad"
+		nnoremap <Tab> <Esc>
+		vnoremap <Tab> <Esc>gV
+		onoremap <Tab> <Esc>
+		inoremap <Tab> <Esc>`^
+		inoremap <Leader><Tab> <Tab>
+	endif
+	" }}}
 
-  " Remap keys for auto-completion menu {{{
-  inoremap <expr> <CR>   pumvisible() ? "\<C-y>" : "\<CR>"
-  inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
-  inoremap <expr> <Up>   pumvisible() ? "\<C-p>" : "\<Up>"
-  " }}}
+	" Remap keys for auto-completion menu {{{
+	inoremap <expr> <CR>   pumvisible() ? "\<C-y>" : "\<CR>"
+	inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
+	inoremap <expr> <Up>   pumvisible() ? "\<C-p>" : "\<Up>"
+	" }}}
 
-  " Paste toggle (,p) {{{
-  set pastetoggle=<leader>p
-  map <leader>p :set invpaste paste?<CR>
-  " }}}
+	" Paste toggle (,p) {{{
+	set pastetoggle=<leader>p
+	map <leader>p :set invpaste paste?<CR>
+	" }}}
 
-  " Yank from cursor to end of line {{{
-  nnoremap Y y$
-  " }}}
+	" Yank from cursor to end of line {{{
+	nnoremap Y y$
+	" }}}
 
-  " Insert newline {{{
-  map <leader><Enter> o<ESC>
-  " }}}
+	" Insert newline {{{
+	map <leader><Enter> o<ESC>
+	" }}}
 
-  " Search and replace word under cursor (,*) {{{
-  nnoremap <leader>* :%s/\<<C-r><C-w>\>//<Left>
-  vnoremap <leader>* "hy:%s/\V<C-r>h//<left>
-  " }}}
+	" Search and replace word under cursor (,*) {{{
+	nnoremap <leader>* :%s/\<<C-r><C-w>\>//<Left>
+	vnoremap <leader>* "hy:%s/\V<C-r>h//<left>
+	" }}}
 
-  " Strip trailing whitespace (,ss) {{{
-  function! StripWhitespace () " {{{
-    let save_cursor = getpos(".")
-    let old_query = getreg('/')
-    :%s/\s\+$//e
-    call setpos('.', save_cursor)
-    call setreg('/', old_query)
-  endfunction " }}}
-  noremap <leader>ss :call StripWhitespace ()<CR>
-  " }}}
+	" Strip trailing whitespace (,ss) {{{
+	function! StripWhitespace () " {{{
+		let save_cursor = getpos(".")
+		let old_query = getreg('/')
+		:%s/\s\+$//e
+		call setpos('.', save_cursor)
+		call setreg('/', old_query)
+	endfunction " }}}
+	noremap <leader>ss :call StripWhitespace ()<CR>
+	" }}}
 
-  " Join lines and restore cursor location (J) {{{
-  nnoremap J mjJ`j
-  " }}}
+	" Join lines and restore cursor location (J) {{{
+	nnoremap J mjJ`j
+	" }}}
 
-  " Toggle folds (<Space>) {{{
-  nnoremap <silent> <space> :exe 'silent! normal! '.((foldclosed('.')>0)? 'zMzx' : 'zc')<CR>
-  " }}}
+	" Toggle folds (<Space>) {{{
+	nnoremap <silent> <space> :exe 'silent! normal! '.((foldclosed('.')>0)? 'zMzx' : 'zc')<CR>
+	" }}}
 
-  " Fix page up and down {{{
-  map <PageUp> <C-U>
-  map <PageDown> <C-D>
-  imap <PageUp> <C-O><C-U>
-  imap <PageDown> <C-O><C-D>
-  " }}}
+	" Fix page up and down {{{
+	map <PageUp> <C-U>
+	map <PageDown> <C-D>
+	imap <PageUp> <C-O><C-U>
+	imap <PageDown> <C-O><C-D>
+	" }}}
 
-  " Relative numbers {{{
-  set relativenumber " Use relative line numbers. Current line is still in status bar.
-  au BufReadPost,BufNewFile * set relativenumber
-  " }}}
+	" Relative numbers {{{
+	set relativenumber " Use relative line numbers. Current line is still in status bar.
+	au BufReadPost,BufNewFile * set relativenumber
+	" }}}
 augroup END
 " }}}
 
 " NERD Commenter {{{
 augroup nerd_commenter
-  autocmd!
+	autocmd!
 
-  let NERDSpaceDelims=1
-  let NERDCompactSexyComs=1
-  let g:NERDCustomDelimiters = { 'racket': { 'left': ';', 'leftAlt': '#|', 'rightAlt': '|#' } }
+	let NERDSpaceDelims=1
+	let NERDCompactSexyComs=1
+	let g:NERDCustomDelimiters = { 'racket': { 'left': ';', 'leftAlt': '#|', 'rightAlt': '|#' } }
 augroup END
 " }}}
 
 " Buffers {{{
 augroup buffer_control
-  autocmd!
+	autocmd!
 
-  " Prompt for buffer to select (,bs) {{{
-  nnoremap <leader>bs :CtrlPBuffer<CR>
-  " }}}
+	" Prompt for buffer to select (,bs) {{{
+	nnoremap <leader>bs :CtrlPBuffer<CR>
+	" }}}
 
-  " Buffer navigation (,,) (gb) (gB) (,ls) {{{
-  map <Leader>, <C-^>
-  map <Leader>ls :buffers<CR>
-  map gb :bnext<CR>
-  map gB :bprev<CR>
-  " }}}
+	" Buffer navigation (,,) (gb) (gB) (,ls) {{{
+	map <Leader>, <C-^>
+	map <Leader>ls :buffers<CR>
+	map gb :bnext<CR>
+	map gB :bprev<CR>
+	" }}}
 
-  " Jump to buffer number (<N>gb) {{{
-  let c = 1
-  while c <= 99
-    execute "nnoremap " . c . "gb :" . c . "b\<CR>"
-    let c += 1
-  endwhile
-  " }}}
+	" Jump to buffer number (<N>gb) {{{
+	let c = 1
+	while c <= 99
+		execute "nnoremap " . c . "gb :" . c . "b\<CR>"
+		let c += 1
+	endwhile
+	" }}}
 
-  " Close Quickfix window (,qq) {{{
-  map <leader>qq :cclose<CR>
-  " }}}
+	" Close Quickfix window (,qq) {{{
+	map <leader>qq :cclose<CR>
+	" }}}
 augroup END
 " }}}
 
 " Jumping to tags {{{
 augroup jump_to_tags
-  autocmd!
+	autocmd!
 
-  " Basically, <c-]> jumps to tags (like normal) and <c-\> opens the tag in a new
-  " split instead.
-  "
-  " Both of them will align the destination line to the upper middle part of the
-  " screen.  Both will pulse the cursor line so you can see where the hell you
-  " are.  <c-\> will also fold everything in the buffer and then unfold just
-  " enough for you to see the destination line.
-  nnoremap <c-]> <c-]>mzzvzz15<c-e>`z:Pulse<cr>
-  nnoremap <c-\> <c-w>v<c-]>mzzMzvzz15<c-e>`z:Pulse<cr>
+	" Basically, <c-]> jumps to tags (like normal) and <c-\> opens the tag in a new
+	" split instead.
+	"
+	" Both of them will align the destination line to the upper middle part of the
+	" screen.  Both will pulse the cursor line so you can see where the hell you
+	" are.  <c-\> will also fold everything in the buffer and then unfold just
+	" enough for you to see the destination line.
+	nnoremap <c-]> <c-]>mzzvzz15<c-e>`z:Pulse<cr>
+	nnoremap <c-\> <c-w>v<c-]>mzzMzvzz15<c-e>`z:Pulse<cr>
 
-  " Pulse Line (thanks Steve Losh)
-  function! s:Pulse() " {{{
-    redir => old_hi
-    silent execute 'hi CursorLine'
-    redir END
-    let old_hi = split(old_hi, '\n')[0]
-    let old_hi = substitute(old_hi, 'xxx', '', '')
+	" Pulse Line (thanks Steve Losh)
+	function! s:Pulse() " {{{
+		redir => old_hi
+		silent execute 'hi CursorLine'
+		redir END
+		let old_hi = split(old_hi, '\n')[0]
+		let old_hi = substitute(old_hi, 'xxx', '', '')
 
-    let steps = 8
-    let width = 1
-    let start = width
-    let end = steps * width
-    let color = 233
+		let steps = 8
+		let width = 1
+		let start = width
+		let end = steps * width
+		let color = 233
 
-    for i in range(start, end, width)
-      execute "hi CursorLine ctermbg=" . (color + i)
-      redraw
-      sleep 6m
-    endfor
-    for i in range(end, start, -1 * width)
-      execute "hi CursorLine ctermbg=" . (color + i)
-      redraw
-      sleep 6m
-    endfor
+		for i in range(start, end, width)
+			execute "hi CursorLine ctermbg=" . (color + i)
+			redraw
+			sleep 6m
+		endfor
+		for i in range(end, start, -1 * width)
+			execute "hi CursorLine ctermbg=" . (color + i)
+			redraw
+			sleep 6m
+		endfor
 
-    execute 'hi ' . old_hi
-  endfunction " }}}
+		execute 'hi ' . old_hi
+	endfunction " }}}
 
-  command! -nargs=0 Pulse call s:Pulse()
+	command! -nargs=0 Pulse call s:Pulse()
 augroup END
 " }}}
 
 " Highlight Interesting Words {{{
 augroup highlight_interesting_word
-  autocmd!
-  " This mini-plugin provides a few mappings for highlighting words temporarily.
-  "
-  " Sometimes you're looking at a hairy piece of code and would like a certain
-  " word or two to stand out temporarily.  You can search for it, but that only
-  " gives you one color of highlighting.  Now you can use <leader>N where N is
-  " a number from 1-6 to highlight the current word in a specific color.
-  function! HiInterestingWord(n) " {{{
-    " Save our location.
-    normal! mz
+	autocmd!
+	" This mini-plugin provides a few mappings for highlighting words temporarily.
+	"
+	" Sometimes you're looking at a hairy piece of code and would like a certain
+	" word or two to stand out temporarily.  You can search for it, but that only
+	" gives you one color of highlighting.  Now you can use <leader>N where N is
+	" a number from 1-6 to highlight the current word in a specific color.
+	function! HiInterestingWord(n) " {{{
+		" Save our location.
+		normal! mz
 
-    " Yank the current word into the z register.
-    normal! "zyiw
+		" Yank the current word into the z register.
+		normal! "zyiw
 
-    " Calculate an arbitrary match ID.  Hopefully nothing else is using it.
-    let mid = 86750 + a:n
+		" Calculate an arbitrary match ID.  Hopefully nothing else is using it.
+		let mid = 86750 + a:n
 
-    " Clear existing matches, but don't worry if they don't exist.
-    silent! call matchdelete(mid)
+		" Clear existing matches, but don't worry if they don't exist.
+		silent! call matchdelete(mid)
 
-    " Construct a literal pattern that has to match at boundaries.
-    let pat = '\V\<' . escape(@z, '\') . '\>'
+		" Construct a literal pattern that has to match at boundaries.
+		let pat = '\V\<' . escape(@z, '\') . '\>'
 
-    " Actually match the words.
-    call matchadd("InterestingWord" . a:n, pat, 1, mid)
+		" Actually match the words.
+		call matchadd("InterestingWord" . a:n, pat, 1, mid)
 
-    " Move back to our original location.
-    normal! `z
-  endfunction " }}}
+		" Move back to our original location.
+		normal! `z
+	endfunction " }}}
 
-  " Mappings {{{
-  nnoremap <silent> <leader>1 :call HiInterestingWord(1)<cr>
-  nnoremap <silent> <leader>2 :call HiInterestingWord(2)<cr>
-  nnoremap <silent> <leader>3 :call HiInterestingWord(3)<cr>
-  nnoremap <silent> <leader>4 :call HiInterestingWord(4)<cr>
-  nnoremap <silent> <leader>5 :call HiInterestingWord(5)<cr>
-  nnoremap <silent> <leader>6 :call HiInterestingWord(6)<cr>
-  " }}}
+	" Mappings {{{
+	nnoremap <silent> <leader>1 :call HiInterestingWord(1)<cr>
+	nnoremap <silent> <leader>2 :call HiInterestingWord(2)<cr>
+	nnoremap <silent> <leader>3 :call HiInterestingWord(3)<cr>
+	nnoremap <silent> <leader>4 :call HiInterestingWord(4)<cr>
+	nnoremap <silent> <leader>5 :call HiInterestingWord(5)<cr>
+	nnoremap <silent> <leader>6 :call HiInterestingWord(6)<cr>
+	" }}}
 
-  " Default Highlights {{{
-  hi def InterestingWord1 guifg=#000000 ctermfg=16 guibg=#ffa724 ctermbg=214
-  hi def InterestingWord2 guifg=#000000 ctermfg=16 guibg=#aeee00 ctermbg=154
-  hi def InterestingWord3 guifg=#000000 ctermfg=16 guibg=#8cffba ctermbg=121
-  hi def InterestingWord4 guifg=#000000 ctermfg=16 guibg=#b88853 ctermbg=137
-  hi def InterestingWord5 guifg=#000000 ctermfg=16 guibg=#ff9eb8 ctermbg=211
-  hi def InterestingWord6 guifg=#000000 ctermfg=16 guibg=#ff2c4b ctermbg=195
-  " }}}
+	" Default Highlights {{{
+	hi def InterestingWord1 guifg=#000000 ctermfg=16 guibg=#ffa724 ctermbg=214
+	hi def InterestingWord2 guifg=#000000 ctermfg=16 guibg=#aeee00 ctermbg=154
+	hi def InterestingWord3 guifg=#000000 ctermfg=16 guibg=#8cffba ctermbg=121
+	hi def InterestingWord4 guifg=#000000 ctermfg=16 guibg=#b88853 ctermbg=137
+	hi def InterestingWord5 guifg=#000000 ctermfg=16 guibg=#ff9eb8 ctermbg=211
+	hi def InterestingWord6 guifg=#000000 ctermfg=16 guibg=#ff2c4b ctermbg=195
+	" }}}
 augroup END
 " }}}
 
 " Word Processor Mode {{{
 augroup word_processor_mode
-  autocmd!
+	autocmd!
 
-  function! WordProcessorMode() " {{{
-    setlocal formatoptions=t1
-    map j gj
-    map k gk
-    setlocal smartindent
-    setlocal spell spelllang=en_ca
-    setlocal noexpandtab
-    setlocal wrap
-    setlocal linebreak
-    Goyo 100
-  endfunction " }}}
-  com! WP call WordProcessorMode()
+	function! WordProcessorMode() " {{{
+		setlocal formatoptions=t1
+		map j gj
+		map k gk
+		setlocal smartindent
+		setlocal spell spelllang=en_ca
+		setlocal noexpandtab
+		setlocal wrap
+		setlocal linebreak
+		Goyo 100
+	endfunction " }}}
+	com! WP call WordProcessorMode()
 augroup END
 " }}}
 
 " Restore Cursor Position {{{
 augroup restore_cursor
-  autocmd!
+	autocmd!
 
-  autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
+	autocmd BufReadPost *
+		\ if line("'\"") > 1 && line("'\"") <= line("$") |
+		\   exe "normal! g`\"" |
+		\ endif
 augroup END
 " }}}
 
@@ -417,108 +417,108 @@ augroup END
 
 " C {{{
 augroup filetype_c
-  autocmd!
+	autocmd!
 
-  " Highlight Custom C Types {{{
-  autocmd BufRead,BufNewFile *.[ch] let fname = expand('<afile>:p:h') . '/types.vim'
-  autocmd BufRead,BufNewFile *.[ch] if filereadable(fname)
-  autocmd BufRead,BufNewFile *.[ch]   exe 'so ' . fname
-  autocmd BufRead,BufNewFile *.[ch] endif
-  " }}}
+	" Highlight Custom C Types {{{
+	autocmd BufRead,BufNewFile *.[ch] let fname = expand('<afile>:p:h') . '/types.vim'
+	autocmd BufRead,BufNewFile *.[ch] if filereadable(fname)
+	autocmd BufRead,BufNewFile *.[ch]   exe 'so ' . fname
+	autocmd BufRead,BufNewFile *.[ch] endif
+	" }}}
 augroup END
 " }}}
 
 " Clojure {{{
 augroup filetype_clojure
-  autocmd!
-  let g:vimclojure#ParenRainbow = 1 " Enable rainbow parens
-  let g:vimclojure#DynamicHighlighting = 1 " Dynamic highlighting
-  let g:vimclojure#FuzzyIndent = 1 " Names beginning in 'def' or 'with' to be indented as if they were included in the 'lispwords' option
+	autocmd!
+	let g:vimclojure#ParenRainbow = 1 " Enable rainbow parens
+	let g:vimclojure#DynamicHighlighting = 1 " Dynamic highlighting
+	let g:vimclojure#FuzzyIndent = 1 " Names beginning in 'def' or 'with' to be indented as if they were included in the 'lispwords' option
 augroup END
 " }}}
 
 " Coffee {{{
 augroup filetype_coffee
-  autocmd!
-  au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+	autocmd!
+	au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 augroup END
 " }}}
 
 " Fish {{{
 augroup filetype_fish
-  autocmd!
-  au BufRead,BufNewFile *.fish set ft=fish
+	autocmd!
+	au BufRead,BufNewFile *.fish set ft=fish
 augroup END
 " }}}
 
 " Handlebars {{{
 augroup filetype_hbs
-  autocmd!
-  au BufRead,BufNewFile *.hbs,*.handlebars,*.hbs.erb,*.handlebars.erb setl ft=mustache syntax=mustache
+	autocmd!
+	au BufRead,BufNewFile *.hbs,*.handlebars,*.hbs.erb,*.handlebars.erb setl ft=mustache syntax=mustache
 augroup END
 " }}}
 
 " Jade {{{
 augroup filetype_jade
-  autocmd!
-  au BufRead,BufNewFile *.jade set ft=jade syntax=jade
+	autocmd!
+	au BufRead,BufNewFile *.jade set ft=jade syntax=jade
 augroup END
 " }}}
 
 " JavaScript {{{
 augroup filetype_javascript
-  autocmd!
-  let g:javascript_conceal = 1
+	autocmd!
+	let g:javascript_conceal = 1
 augroup END
 " }}}
 
 " JSON {{{
 augroup filetype_json
-  autocmd!
-  au BufRead,BufNewFile *.json set ft=json syntax=javascript
+	autocmd!
+	au BufRead,BufNewFile *.json set ft=json syntax=javascript
 augroup END
 " }}}
 
 " Markdown {{{
 augroup filetype_markdown
-  autocmd!
-  let g:markdown_fenced_languages = ['ruby', 'html', 'javascript', 'css', 'erb=eruby.html', 'bash=sh']
+	autocmd!
+	let g:markdown_fenced_languages = ['ruby', 'html', 'javascript', 'css', 'erb=eruby.html', 'bash=sh']
 augroup END
 " }}}
 
 " Nu {{{
 augroup filetype_nu
-  autocmd!
-  au BufNewFile,BufRead *.nu,*.nujson,Nukefile setf nu
+	autocmd!
+	au BufNewFile,BufRead *.nu,*.nujson,Nukefile setf nu
 augroup END
 " }}}
 
 " Ruby {{{
 augroup filetype_ruby
-  autocmd!
+	autocmd!
 
-  au BufRead,BufNewFile Rakefile,Capfile,Gemfile,.autotest,.irbrc,*.treetop,*.tt set ft=ruby syntax=ruby
+	au BufRead,BufNewFile Rakefile,Capfile,Gemfile,.autotest,.irbrc,*.treetop,*.tt set ft=ruby syntax=ruby
 
-  " Ruby.vim {{{
-  let ruby_operators = 1
-  let ruby_space_errors = 1
-  let ruby_fold = 1
-  " }}}
+	" Ruby.vim {{{
+	let ruby_operators = 1
+	let ruby_space_errors = 1
+	let ruby_fold = 1
+	" }}}
 augroup END
 " }}}
 
 " }}}
 " XML {{{
 augroup filetype_xml
-  autocmd!
-  au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
+	autocmd!
+	au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 augroup END
 " }}}
 
 " ZSH {{{
 augroup filetype_zsh
-  autocmd!
-  au BufRead,BufNewFile .zsh_rc,.functions,.commonrc set ft=zsh
+	autocmd!
+	au BufRead,BufNewFile .zsh_rc,.functions,.commonrc set ft=zsh
 augroup END
 " }}}
 
@@ -527,82 +527,82 @@ augroup END
 
 " Airline.vim {{{
 augroup airline_config
-  autocmd!
-  let g:airline_powerline_fonts = 1
-  let g:airline_enable_syntastic = 1
-  let g:airline#extensions#tabline#buffer_nr_format = '%s '
-  let g:airline#extensions#tabline#buffer_nr_show = 1
-  let g:airline#extensions#tabline#enabled = 1
-  let g:airline#extensions#tabline#fnamecollapse = 0
-  let g:airline#extensions#tabline#fnamemod = ':t'
+	autocmd!
+	let g:airline_powerline_fonts = 1
+	let g:airline_enable_syntastic = 1
+	let g:airline#extensions#tabline#buffer_nr_format = '%s '
+	let g:airline#extensions#tabline#buffer_nr_show = 1
+	let g:airline#extensions#tabline#enabled = 1
+	let g:airline#extensions#tabline#fnamecollapse = 0
+	let g:airline#extensions#tabline#fnamemod = ':t'
 augroup END
 " }}}
 
 " CtrlP.vim {{{
 augroup ctrlp_config
-  autocmd!
-  let g:ctrlp_clear_cache_on_exit = 0 " Do not clear filenames cache, to improve CtrlP startup
-  let g:ctrlp_lazy_update = 350 " Set delay to prevent extra search
-  let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' } " Use python fuzzy matcher for better performance
-  let g:ctrlp_match_window_bottom = 0 " Show at top of window
-  let g:ctrlp_max_files = 0 " Set no file limit, we are building a big project
-  let g:ctrlp_switch_buffer = 'Et' " Jump to tab AND buffer if already open
-  let g:ctrlp_open_new_file = 'r' " Open newly created files in the current window
-  let g:ctrlp_open_multiple_files = 'ij' " Open multiple files in hidden buffers, and jump to the first one
+	autocmd!
+	let g:ctrlp_clear_cache_on_exit = 0 " Do not clear filenames cache, to improve CtrlP startup
+	let g:ctrlp_lazy_update = 350 " Set delay to prevent extra search
+	let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' } " Use python fuzzy matcher for better performance
+	let g:ctrlp_match_window_bottom = 0 " Show at top of window
+	let g:ctrlp_max_files = 0 " Set no file limit, we are building a big project
+	let g:ctrlp_switch_buffer = 'Et' " Jump to tab AND buffer if already open
+	let g:ctrlp_open_new_file = 'r' " Open newly created files in the current window
+	let g:ctrlp_open_multiple_files = 'ij' " Open multiple files in hidden buffers, and jump to the first one
 augroup END
 " }}}
 
 " Silver Searcher {{{
 augroup ag_config
-  autocmd!
+	autocmd!
 
-  if executable("ag")
-    " Note we extract the column as well as the file and line number
-    set grepprg=ag\ --nogroup\ --nocolor\ --column
-    set grepformat=%f:%l:%c%m
+	if executable("ag")
+		" Note we extract the column as well as the file and line number
+		set grepprg=ag\ --nogroup\ --nocolor\ --column
+		set grepformat=%f:%l:%c%m
 
-    " Have the silver searcher ignore all the same things as wilgignore
-    let b:ag_command = 'ag %s -i --nocolor --nogroup'
+		" Have the silver searcher ignore all the same things as wilgignore
+		let b:ag_command = 'ag %s -i --nocolor --nogroup'
 
-    for i in split(&wildignore, ",")
-      let i = substitute(i, '\*/\(.*\)/\*', '\1', 'g')
-      let b:ag_command = b:ag_command . ' --ignore "' . substitute(i, '\*/\(.*\)/\*', '\1', 'g') . '"'
-    endfor
+		for i in split(&wildignore, ",")
+			let i = substitute(i, '\*/\(.*\)/\*', '\1', 'g')
+			let b:ag_command = b:ag_command . ' --ignore "' . substitute(i, '\*/\(.*\)/\*', '\1', 'g') . '"'
+		endfor
 
-    let b:ag_command = b:ag_command . ' --hidden -g ""'
-    let g:ctrlp_user_command = b:ag_command
-  endif
+		let b:ag_command = b:ag_command . ' --hidden -g ""'
+		let g:ctrlp_user_command = b:ag_command
+	endif
 augroup END
 " }}}
 
 " EasyAlign.vim {{{
 augroup easy_align_config
-  autocmd!
-  vmap <Enter> <Plug>(EasyAlign) " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
-  nmap <Leader>a <Plug>(EasyAlign) " Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
+	autocmd!
+	vmap <Enter> <Plug>(EasyAlign) " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+	nmap <Leader>a <Plug>(EasyAlign) " Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
 augroup END
 " }}}
 
 " Notes.vim {{{
 augroup notes_config
-  autocmd!
-  let g:notes_directories = ['~/Dropbox/Notes']
+	autocmd!
+	let g:notes_directories = ['~/Dropbox/Notes']
 augroup END
 " }}}
 
 " RainbowParenthesis.vim {{{
 augroup rainbow_parenthesis_config
-  autocmd!
-  nnoremap <leader>rp :RainbowParenthesesToggle<CR>
+	autocmd!
+	nnoremap <leader>rp :RainbowParenthesesToggle<CR>
 augroup END
 " }}}
 
 " Syntastic.vim {{{
 augroup syntastic_config
-  autocmd!
-  let g:syntastic_error_symbol = '✗'
-  let g:syntastic_warning_symbol = '⚠'
-  let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+	autocmd!
+	let g:syntastic_error_symbol = '✗'
+	let g:syntastic_warning_symbol = '⚠'
+	let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 augroup END
 " }}}
 

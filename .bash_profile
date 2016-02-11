@@ -3,7 +3,7 @@
 #   ~/.extra can be used for settings you don’t want to commit,
 #   Use it to configure your PATH, thus it being first in line.
 for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
-    [ -r "$file" ] && source "$file"
+	[ -r "$file" ] && source "$file"
 done
 unset file
 
@@ -11,12 +11,12 @@ unset file
 # generic colouriser
 GRC=`which grc`
 if [ "$TERM" != dumb ] && [ -n "$GRC" ]
-    then
-        alias colourify="$GRC -es --colour=auto"
-        alias configure='colourify ./configure' 
-        for app in {diff,make,gcc,g++,mtr,ping,traceroute}; do
-            alias "$app"='colourify '$app
-    done
+	then
+		alias colourify="$GRC -es --colour=auto"
+		alias configure='colourify ./configure'
+		for app in {diff,make,gcc,g++,mtr,ping,traceroute}; do
+			alias "$app"='colourify '$app
+	done
 fi
 
 ##
@@ -44,18 +44,18 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 ##
 
 if [[ -n "$ZSH_VERSION" ]]; then  # quit now if in zsh
-    return 1 2> /dev/null || exit 1;
+	return 1 2> /dev/null || exit 1;
 fi;
 
 # bash completion.
 if  which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
-    source "$(brew --prefix)/share/bash-completion/bash_completion";
+	source "$(brew --prefix)/share/bash-completion/bash_completion";
 elif [ -f /etc/bash_completion ]; then
-    source /etc/bash_completion;
+	source /etc/bash_completion;
 fi;
 
 if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
-    source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+	source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
 fi
 
 GIT_PROMPT_ONLY_IN_REPO=1
@@ -66,7 +66,7 @@ source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 
 # Enable tab completion for `g` by marking it as an alias for `git`
 if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-    complete -o default -o nospace -F _git g;
+	complete -o default -o nospace -F _git g;
 fi;
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
@@ -79,7 +79,7 @@ complete -W "NSGlobalDomain" defaults
 
 ##
 ## better `cd`
-## 
+##
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
@@ -100,11 +100,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 function _update_ps1() {
-       PS1="$(~/powerline-shell.py $? 2> /dev/null)"
+	   PS1="$(~/powerline-shell.py $? 2> /dev/null)"
 }
 
 if [ "$TERM" != "linux" ]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+	PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
 source ~/perl5/perlbrew/etc/bashrc
