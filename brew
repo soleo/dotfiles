@@ -72,6 +72,8 @@ brew install tcptrace
 brew install GraphicsMagick
 # install command line recording for terminal sessions
 brew install asciinema
+# Install byobu for termial multiplexing
+brew install byobu
 
 # Remove outdated versions from the cellar
 brew cleanup
