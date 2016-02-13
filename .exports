@@ -15,4 +15,4 @@ export LANG="en_US"
 eval $(gdircolors -b ~/.dircolors)
 
 export PATH="/usr/local/sbin:$PATH"
-export PATH="~/bin:$PATH"
+export PATH="/Users/xinjiang/bin:$PATH"
