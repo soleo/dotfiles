@@ -41,6 +41,7 @@ brew install homebrew/dupes/screen
 brew install homebrew/dupes/openssh
 brew install homebrew/php/php55 --with-gmp
 brew install homebrew/php/php-cs-fixer
+brew install heroku-toolbelt
 
 # Install other useful binaries
 brew install ack

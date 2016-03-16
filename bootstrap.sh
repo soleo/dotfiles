@@ -80,6 +80,7 @@ npm install -g grunt-cli
 npm install -g bower
 npm install -g yo
 npm install -g jscs
+npm install -g jshint
 
 # symlinks!
 #   put/move git credentials into ~/.gitconfig.local
