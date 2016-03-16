@@ -31,7 +31,7 @@ sh brew-cask
 
 # github.com/jamiew/git-friendly
 # the `push` command which copies the github compare URL to my clipboard is heaven
-bash < <( curl https://raw.githubusercontent.com/jamiew/git-friendly/master/install.sh)
+#bash < <( curl https://raw.githubusercontent.com/jamiew/git-friendly/master/install.sh)
 
 # Type `git open` to open the GitHub page or website for a repository.
 npm install -g git-open
@@ -39,8 +39,6 @@ npm install -g git-open
 # github.com/rupa/z   - oh how i love you
 git clone https://github.com/rupa/z.git ~/code/z
 chmod +x ~/code/z/z.sh
-
-
 
 # github.com/thebitguru/play-button-itunes-patch
 # disable itunes opening on media keys
@@ -64,17 +62,12 @@ curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/in
 # Install antigen
 git clone https://github.com/zsh-users/antigen.git ~/code/antigen
 # Install Autosuggestion
-git clone git://github.com/tarruda/zsh-autosuggestions ~/.zsh-autosuggestions
-# install teamcil for managing tmux
-#sudo gem install teamocil
-
-
+git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh-autosuggestions
 
 # install iOS App Development Tools
 # avoid error in el capitan Ref http://stackoverflow.com/questions/30812777/cannot-install-cocoa-pods-after-uninstalling-results-in-error
 sudo gem install -n /usr/local/bin cocoapods
 sudo gem install fastlane --verbose
-sudo gem install xctool
 sudo gem install xcpretty
 sudo gem install git-up
 

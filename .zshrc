@@ -4,7 +4,7 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 ZSH_THEME="pure"
 # The following lines were added by compinstall
-zstyle :compinstall filename '/Users/xinjiang/.zshrc'
+zstyle :compinstall filename '/Users/xinjiangshao/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -24,6 +24,7 @@ antigen use oh-my-zsh
 
 # Bundles from the default repo declared above.
 antigen bundles <<EOBUNDLES
+heroku
 git
 git-flow
 git-extras
@@ -36,8 +37,6 @@ nvm
 command-not-found
 # Helper for extracting different types of archives.
 extract
-# atom editor
-atom
 # homebrew something
 brew
 # Tracks your most used directories, based on 'frecency'.
@@ -68,22 +67,14 @@ source ~/.bash_profile
 # Automatically list directory contents on `cd`.
 auto-ls () { ls; }
 chpwd_functions=( auto-ls $chpwd_functions )
-# Setup zsh-autosuggestions
-source /Users/xinjiang/.zsh-autosuggestions/autosuggestions.zsh
 
-# Enable autosuggestions automatically
-zle-line-init() {
-	zle autosuggest-start
-}
-
-zle -N zle-line-init
 
 # use ctrl+t to toggle autosuggestions(hopefully this wont be needed as
 # zsh-autosuggestions is designed to be unobtrusive)
 bindkey '^T' autosuggest-toggle
 
 # added by travis gem
-[ -f /Users/xinjiang/.travis/travis.sh ] && source /Users/xinjiang/.travis/travis.sh
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
 # powerline shell
 function powerline_precmd() {
@@ -103,5 +94,5 @@ if [ "$TERM" != "linux" ]; then
 	install_powerline_precmd
 fi
 
-export NVM_DIR="/Users/xinjiang/.nvm"
+export NVM_DIR="/Users/xinjiangshao/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
