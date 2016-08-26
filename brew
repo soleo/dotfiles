@@ -63,10 +63,13 @@ brew install git-flow
 brew install tmux
 
 # Install Docker
-brew install docker docker-machine
+brew install docker docker-machine docker-compose
 
 # Install AWS-CLI, run `aws configure` after this
 brew install awscli
+brew install amazon-ecs-cli
+brew install aws-elasticbeanstalk
+
 # Install Xctool for iOS App development
 brew install xctool
 brew install tcptrace

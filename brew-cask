@@ -5,8 +5,6 @@
 
 # Install native apps
 
-brew tap caskroom/versions
-
 # daily
 brew cask install alfred
 #brew cask install divvy
@@ -16,7 +14,7 @@ brew cask install gpgtools
 brew cask install spotify
 brew cask install vlc
 #brew cask install onepassword
-#brew cask install rescuetime
+brew cask install rescuetime
 # cask install flux
 
 # dev
