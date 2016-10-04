@@ -4,6 +4,7 @@ function md() {
 }
 
 
+
 # find shorthand
 function f() {
 	find . -name "$1" 2>&1 | grep -v 'Permission denied'
@@ -153,4 +154,9 @@ code () {
 # `shellswitch zsh`
 shellswitch () {
 	chsh -s $(brew --prefix)/bin/$1
+}
+
+# docker related images as cli tools
+docker-phan() {
+	docker run -v $PWD:/mnt/src --rm -u "$(id -u):$(id -g)" cloudflare/phan:latest $@; return $?; 
 }

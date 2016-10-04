@@ -3,7 +3,7 @@
 	email = shaoxinjiang@gmail.com
 [alias]
 	c = commit -am
-	up = pull
+	up = pull --rebase --autostash
 	p = push
 	s = status -s
 	df = diff --color --color-words --abbrev
@@ -84,7 +84,7 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Users/xinjiangshao/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [mergetool "p4mergetool"]
 	trustExitCode = false
