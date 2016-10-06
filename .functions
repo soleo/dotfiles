@@ -160,3 +160,7 @@ shellswitch () {
 docker-phan() {
 	docker run -v $PWD:/mnt/src --rm -u "$(id -u):$(id -g)" cloudflare/phan:latest $@; return $?; 
 }
+
+git-rebase() {
+  git checkout develop && git up && git checkout master && git up || echo "Failed to update" exit;
+}
