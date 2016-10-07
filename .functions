@@ -158,9 +158,20 @@ shellswitch () {
 
 # docker related images as cli tools
 docker-phan() {
-	docker run -v $PWD:/mnt/src --rm -u "$(id -u):$(id -g)" cloudflare/phan:latest $@; return $?; 
+	docker run -v $PWD:/mnt/src --rm -u "$(id -u):$(id -g)" cloudflare/phan:latest $@; return $?;
 }
 
+# git check out develop and master and sync with remote branches.
 git-rebase() {
   git checkout develop && git up && git checkout master && git up || echo "Failed to update" exit;
+}
+
+# docker clean up, remove all stopped containers and untagged images
+# http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html
+# https://github.com/chadoe/docker-cleanup-volumes
+# https://www.calazan.com/docker-cleanup-commands/
+docker-cleanup() {
+	docker rm $(docker ps -a -q);
+	docker rmi $(docker images -q -f dangling=true);
+	docker volume rm $(docker volume ls -qf dangling=true)
 }
