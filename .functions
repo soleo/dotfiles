@@ -4,7 +4,6 @@ function md() {
 }
 
 
-
 # find shorthand
 function f() {
 	find . -name "$1" 2>&1 | grep -v 'Permission denied'
@@ -159,6 +158,10 @@ shellswitch () {
 # docker related images as cli tools
 docker-phan() {
 	docker run -v $PWD:/mnt/src --rm -u "$(id -u):$(id -g)" cloudflare/phan:latest $@; return $?;
+
+      }
+docker-latex(){
+  docker run -v $PWD:/mnt/src --rm  soleo/latex $@; return $?
 }
 
 # git check out develop and master and sync with remote branches.
