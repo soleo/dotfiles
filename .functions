@@ -44,8 +44,6 @@ function json() {
 }
 
 
-
-
 # get gzipped size
 function gz() {
 	echo "orig size    (bytes): "
@@ -158,15 +156,10 @@ shellswitch () {
 # docker related images as cli tools
 docker-phan() {
 	docker run -v $PWD:/mnt/src --rm -u "$(id -u):$(id -g)" cloudflare/phan:latest $@; return $?;
-
-      }
-docker-latex(){
-  docker run -v $PWD:/mnt/src --rm  soleo/latex $@; return $?
 }
 
-# git check out develop and master and sync with remote branches.
-git-rebase() {
-  git checkout develop && git up && git checkout master && git up || echo "Failed to update" exit;
+docker-latex() {
+  docker run -v $PWD:/mnt/src --rm  soleo/latex $@; return $?
 }
 
 # docker clean up, remove all stopped containers and untagged images
@@ -178,3 +171,14 @@ docker-cleanup() {
 	docker rmi $(docker images -q -f dangling=true);
 	docker volume rm $(docker volume ls -qf dangling=true)
 }
+
+check-usage() {
+	du -d 1 -h $PWD
+}
+
+# git check out develop and master and sync with remote branches.
+git-rebase() {
+  git checkout develop && git up && git checkout master && git up || echo "Failed to update" exit;
+}
+
+
