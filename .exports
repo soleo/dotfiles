@@ -20,5 +20,5 @@ export PATH="/Users/xinjiang/.composer/vendor/bin:$PATH"
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=$HOME/work
 export PATH=$PATH:$GOPATH/bin
-
+export PATH="$PATH:$HOME/.yarn/bin"
 export JAVA_HOME=$(/usr/libexec/java_home)
