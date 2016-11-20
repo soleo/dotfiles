@@ -96,3 +96,6 @@ fi
 
 export NVM_DIR="/Users/xinjiangshao/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# OPAM configuration
+. /Users/xinjiang/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
