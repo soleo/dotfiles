@@ -19,7 +19,7 @@ brew cask install rescuetime
 
 # dev
 brew cask install iterm2
-# brew cask install sublime-text // Need sublime-text 3 not 2
+brew cask install sublime-text3 // Need sublime-text 3 not 2
 brew cask install imagealpha
 brew cask install imageoptim
 #brew cask install sourcetree
