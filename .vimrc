@@ -20,9 +20,9 @@ let mapleader=","
 " }}}
 
 " Local directories {{{
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
-set undodir=~/.vim/undo
+set backupdir=.,~/.vim/backups
+set directory=.,~/.vim/swaps
+set undodir=.,~/.vim/undo
 " }}}
 
 " Set some junk {{{
