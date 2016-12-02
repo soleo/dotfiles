@@ -8,11 +8,8 @@ The dotfiles are based on paulirish (https://github.com/paulirish/dotfiles/)
 # Tools I use
 
 - Sublime Text 3
-- Homebrew
-- Brew Cask for installing binaries
+- HomeBrew
 - Zsh
-- Oh-my-zsh
-- z
 - iTerm2
-- Terminal Font : Source Code Pro Powerline
+
 

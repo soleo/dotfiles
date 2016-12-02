@@ -26,8 +26,8 @@ fi
 
 #
 # install all the things
-sh brew
-sh brew-cask
+#sh brew
+#sh brew-cask
 
 # github.com/jamiew/git-friendly
 # the `push` command which copies the github compare URL to my clipboard is heaven
@@ -42,7 +42,7 @@ chmod +x ~/code/z/z.sh
 
 # github.com/thebitguru/play-button-itunes-patch
 # disable itunes opening on media keys
-git clone https://github.com/thebitguru/play-button-itunes-patch ~/code/play-button-itunes-patch
+# git clone https://github.com/thebitguru/play-button-itunes-patch ~/code/play-button-itunes-patch
 
 # change to bash 4 (installed by homebrew)
 BASHPATH=$(brew --prefix)/bin/bash
@@ -66,20 +66,15 @@ git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh-autosuggestions
 
 # install iOS App Development Tools
 # avoid error in el capitan Ref http://stackoverflow.com/questions/30812777/cannot-install-cocoa-pods-after-uninstalling-results-in-error
-sudo gem install -n /usr/local/bin cocoapods
-sudo gem install fastlane --verbose
+sudo gem install cocoapods
+sudo gem install fastlane
 sudo gem install xcpretty
-sudo gem install git-up
 
 # Install Tools for Automation Deployment
 sudo easy_install pip
-sudo pip install ansible
 
 # Front End Development Toolkit
-npm install -g grunt-cli
-npm install -g bower
-npm install -g yo
-npm install -g jscs
+npm install -g yarn
 npm install -g jshint
 
 # symlinks!
