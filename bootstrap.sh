@@ -75,6 +75,7 @@ sudo easy_install pip
 
 # Front End Development Toolkit
 npm install -g yarn
+npm install -g gulp-cli
 npm install -g jshint
 
 # symlinks!

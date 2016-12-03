@@ -189,3 +189,24 @@ function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
 
+# sync upstream with your origin. useful if you're a collaborator
+function git-sync()
+ {
+    RED='\033[0;31m'
+    GREEN='\033[0;32m'
+    NC='\033[0m' # No Color
+  
+    if [ -d .git ]; then
+        printf "${GREEN}Fetching info from upstream...${NC}\n"
+        git fetch upstream
+        printf "${GREEN}Merging upstream/master into master...${NC}\n"
+        git checkout master
+        git merge upstream/master master
+        printf "${GREEN}Pushing origin/master...${NC}\n"
+        git push origin master
+    else # not a git repo
+        printf "${RED}Not a git repo!${NC} You're actually at "
+        pwd
+    fi;
+ }
+
