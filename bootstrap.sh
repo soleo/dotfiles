@@ -26,8 +26,8 @@ fi
 
 #
 # install all the things
-#sh brew
-#sh brew-cask
+sh brew
+sh brew-cask
 
 # github.com/jamiew/git-friendly
 # the `push` command which copies the github compare URL to my clipboard is heaven
@@ -55,7 +55,7 @@ echo $BASH_VERSION # should be 4.x not the old 3.2.X
 
 # set up osx defaults
 #   maybe something else in here https://github.com/hjuutilainen/dotfiles/blob/master/bin/osx-user-defaults.sh
-#sh osx
+#sh macos
 
 # Install oh-my-zsh now
 curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
