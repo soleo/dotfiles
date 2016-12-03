@@ -875,7 +875,7 @@ defaults write "${FLUX_DOMAIN}" wakeTime -int 390
 # Sleep late on weekends
 defaults write "${FLUX_DOMAIN}" sleepLate -bool true
 
-CFPreferencesAppSynchronize "${FLUX_DOMAIN}"
+#CFPreferencesAppSynchronize "${FLUX_DOMAIN}"
 
 ###############################################################################
 # Spectacle.app                                                               #
