@@ -4,7 +4,7 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 ZSH_THEME="pure"
 # The following lines were added by compinstall
-zstyle :compinstall filename '/Users/xinjiangshao/.zshrc'
+zstyle :compinstall filename '/Users/xinjiang/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -94,7 +94,7 @@ if [ "$TERM" != "linux" ]; then
 	install_powerline_precmd
 fi
 
-export NVM_DIR="/Users/xinjiangshao/.nvm"
+export NVM_DIR="/Users/xinjiang/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # OPAM configuration
