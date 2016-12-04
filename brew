@@ -17,7 +17,6 @@ brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`
 brew install gnu-sed --with-default-names
 
-
 # Install Bash 4
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
 brew install bash
@@ -42,7 +41,6 @@ brew install homebrew/dupes/openssh
 brew install homebrew/php/php-cs-fixer
 brew install heroku-toolbelt
 
-
 # Install other useful binaries
 brew install ack
 #install exiv2
@@ -64,6 +62,15 @@ brew install git-flow
 #brew install tmux
 brew install hugo
 
+# install PHP stuff
+brew install php70
+brew install composer
+
+# install databases I used for projects
+brew install mysql
+brew install postgresql
+brew install mongodb
+
 # Install Docker , Use native docker instead now
 #brew install docker docker-machine docker-compose
 
@@ -76,10 +83,11 @@ brew install aws-elasticbeanstalk
 brew install xctool
 brew install tcptrace
 brew install GraphicsMagick
-# install command line recording for terminal sessions
+# Install command line recording for terminal sessions
 brew install asciinema
 # Install byobu for termial multiplexing
 #brew install byobu
+# Install mas for app store only apps
 brew install mas
 
 # Remove outdated versions from the cellar
