@@ -1,5 +1,5 @@
-# vim as default
-export EDITOR="vim"
+# subl as default
+export EDITOR="subl -w"
 
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
