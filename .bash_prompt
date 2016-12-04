@@ -48,7 +48,6 @@ set_prompts() {
 
 		bold=""
 		reset="\e[0m"
-
 		black="\e[1;30m"
 		blue="\e[1;34m"
 		cyan="\e[1;36m"

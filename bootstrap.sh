@@ -31,7 +31,7 @@ sh brew-cask
 
 # github.com/jamiew/git-friendly
 # the `push` command which copies the github compare URL to my clipboard is heaven
-#bash < <( curl https://raw.githubusercontent.com/jamiew/git-friendly/master/install.sh)
+git clone git://github.com/jamiew/git-friendly.git ~/code/git-friendly
 
 # Type `git open` to open the GitHub page or website for a repository.
 npm install -g git-open
@@ -50,9 +50,7 @@ sudo echo $BASHPATH >> /etc/shells
 chsh -s $BASHPATH # will set for current user only.
 echo $BASH_VERSION # should be 4.x not the old 3.2.X
 # Later, confirm iterm settings aren't conflicting.
-
 # go read mathias, paulmillr, gf3, alraa's dotfiles to see what to update with.
-
 # set up osx defaults
 #   maybe something else in here https://github.com/hjuutilainen/dotfiles/blob/master/bin/osx-user-defaults.sh
 #sh macos

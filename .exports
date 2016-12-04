@@ -10,6 +10,7 @@ export LANG="en_US"
 
 #export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+
 # here's LS_COLORS
 # github.com/trapd00r/LS_COLORS
 eval $(gdircolors -b ~/.dircolors)

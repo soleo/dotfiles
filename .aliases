@@ -27,10 +27,7 @@ alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.c
 # use coreutils `ls` if possible…
 [ $(which gls) > /dev/null ] && lscmd="gls" || lscmd="ls"
 
-
 colorflag="-G"
-export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
-
 
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
@@ -57,8 +54,6 @@ alias undopush="git push -f origin HEAD^:master"
 
 # git root
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
-
-
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
