@@ -61,3 +61,7 @@ fonts=(
 )
 echo "Installing fonts..."
 brew cask install ${fonts[@]}
+
+mas install 915839505 # Desk PM: A Writing, Blogging, and Notetaking App
+mas install 410628904 # Wunderlist: To-Do List & Tasks
+mas install 407963104 # Pixelmator
