@@ -1,6 +1,4 @@
 #!/bin/bash
-
-
 # Install native apps
 
 # daily
@@ -14,6 +12,7 @@ brew cask install vlc
 #brew cask install onepassword
 brew cask install rescuetime
 brew cask install flux
+brew cask install karabiner-elements
 
 # dev
 brew cask install iterm2
@@ -46,7 +45,7 @@ brew cask install chromium --force
 #brew cask install keycastr
 #brew cask install sketchup
 
-# desgin tools
+# design tools
 brew cask install sketch
 
 

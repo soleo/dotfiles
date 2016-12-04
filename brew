@@ -5,7 +5,7 @@
 brew update
 
 # Upgrade any already-installed formulae
-brew upgrade --all
+brew upgrade
 
 # Install GNU core utilities (those that come with OS X are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -55,16 +55,16 @@ brew install pv
 brew install rename
 brew install tree
 brew install zopfli
-brew install ffmpeg --with-libvpx
+#brew install ffmpeg --with-libvpx
 brew install trash
 brew install p7zip
 brew install ssh-copy-id
 brew install zsh
 brew install git-flow
 #brew install tmux
-brew install hufgo
+brew install hugo
 
-# Install Docker
+# Install Docker , Use native docker instead now
 #brew install docker docker-machine docker-compose
 
 # Install AWS-CLI, run `aws configure` after this
@@ -81,7 +81,6 @@ brew install asciinema
 # Install byobu for termial multiplexing
 #brew install byobu
 brew install mas
-
 
 # Remove outdated versions from the cellar
 brew cleanup

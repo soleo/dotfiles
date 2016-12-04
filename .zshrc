@@ -99,3 +99,5 @@ export NVM_DIR="/Users/xinjiangshao/.nvm"
 
 # OPAM configuration
 . /Users/xinjiang/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
