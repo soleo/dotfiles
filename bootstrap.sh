@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -ex
 
 # copy paste this file in bit by bit.
 # don't run it.

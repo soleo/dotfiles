@@ -1,15 +1,14 @@
-#!/bin/bash
-# Install native apps
+#!/bin/bash -ex
 
+# Install native apps
+brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
 # daily
 brew cask install alfred
-#brew cask install divvy
 brew cask install dropbox
-#brew cask install gyazo
 brew cask install gpgtools
 brew cask install spotify
 brew cask install vlc
-#brew cask install onepassword
 brew cask install rescuetime
 brew cask install flux
 brew cask install karabiner-elements
@@ -19,35 +18,24 @@ brew cask install iterm2
 brew cask install sublime-text # by default, cask is using sublime text 3 now
 brew cask install imagealpha
 brew cask install imageoptim
-#brew cask install sourcetree
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install p4merge
-#brew cask install fabric
 brew cask install gitup
 brew cask install docker
 brew cask install java
-# fun
-#brew cask install limechat
-#brew cask install miro-video-converter
+
 
 # browsers
 brew cask install google-chrome
-brew cask install firefox
-#brew cask install webkit-nightly --force
-brew cask install chromium --force
+brew cask install firefoxnightly
+brew cask install chromium
 #brew cask install torbrowser
 
 # less often
-#brew cask install disk-inventory-x
-#brew cask install screenflow4 # 4 specifically not 5.
-#brew cask install vlc
-#brew cask install keycastr
-#brew cask install sketchup
-
+brew cask install vlc
 # design tools
 brew cask install sketch
-
 
 #recording screencask as GIF
 brew cask install licecap
