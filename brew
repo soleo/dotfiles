@@ -63,6 +63,7 @@ brew install hugo
 brew install php70
 brew install composer
 brew install homebrew/php/php-cs-fixer
+brew install php70-mongodb
 
 # install databases I used for projects
 brew install mysql
