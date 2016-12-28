@@ -24,6 +24,15 @@
 		fi \
 	}; f"
 
+	# Add Upstream Repo to the fork because I keep forgeting about how to add the remote repo to my forks 
+	aup = "!func_add_upstream() { \
+		if [ $(printf \"%s\" \"$1\" | grep '^https' > /dev/null; printf $?) -eq 0 ]; then \
+			git remote add upstream $1; \
+		else \
+        	echo "It is not a valid repo URL"; \
+		fi \
+	}; func_add_upstream"
+
 [core]
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes

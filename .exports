@@ -1,5 +1,5 @@
-# vim as default
-export EDITOR="vim"
+# subl as default
+export EDITOR="subl -w"
 
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
@@ -10,13 +10,15 @@ export LANG="en_US"
 
 #export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+
 # here's LS_COLORS
 # github.com/trapd00r/LS_COLORS
 eval $(gdircolors -b ~/.dircolors)
 
-export PATH="/usr/local/sbin:$PATH"
-export PATH="/Users/xinjiang/bin:$PATH"
-export PATH="/Users/xinjiang/.composer/vendor/bin:$PATH"
+export PATH=/usr/local/sbin:$PATH
+export PATH=$HOME/bin:$PATH
+export PATH=$HOME/.composer/vendor/bin:$PATH
+export PATH=$HOME/code/git-friendly:$PATH
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=$HOME/work
 export PATH=$PATH:$GOPATH/bin
