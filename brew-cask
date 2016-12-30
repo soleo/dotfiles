@@ -12,6 +12,7 @@ brew cask install vlc
 brew cask install rescuetime
 brew cask install flux
 brew cask install karabiner-elements
+brew cask install keybase
 
 # dev
 brew cask install iterm2
@@ -24,7 +25,7 @@ brew cask install p4merge
 brew cask install gitup
 brew cask install docker
 brew cask install java
-
+brew cask install paw
 
 # browsers
 brew cask install google-chrome
@@ -32,8 +33,6 @@ brew cask install firefoxnightly
 brew cask install chromium
 #brew cask install torbrowser
 
-# less often
-brew cask install vlc
 # design tools
 brew cask install sketch
 
@@ -50,6 +49,7 @@ fonts=(
 echo "Installing fonts..."
 brew cask install ${fonts[@]}
 
+mas install 497799835 # XCode
 mas install 915839505 # Desk PM: A Writing, Blogging, and Notetaking App
 mas install 410628904 # Wunderlist: To-Do List & Tasks
 mas install 407963104 # Pixelmator

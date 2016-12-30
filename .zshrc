@@ -103,3 +103,6 @@ export NVM_DIR="$HOME/.nvm"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# added by travis gem
+[ -f /Users/xinjiang/.travis/travis.sh ] && source /Users/xinjiang/.travis/travis.sh

@@ -195,7 +195,7 @@ function git-sync()
     RED='\033[0;31m'
     GREEN='\033[0;32m'
     NC='\033[0m' # No Color
-  
+
     if [ -d .git ]; then
         printf "${GREEN}Fetching info from upstream...${NC}\n"
         git fetch upstream
@@ -209,4 +209,3 @@ function git-sync()
         pwd
     fi;
  }
-
