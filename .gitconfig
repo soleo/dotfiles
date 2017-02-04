@@ -34,13 +34,11 @@
 		fi \
 	}; func_add_upstream"
 [commit]
-
     # https://help.github.com/articles/signing-commits-using-gpg/
     gpgsign = true
 [core]
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes
-        ignorecase = false
 [color]
   ui = auto
   branch = auto
@@ -61,11 +59,6 @@
   changed = green
   untracked = cyan reverse
   branch = magenta
-
-[merge]
-	tool = p4mergetool
-
-
 # rewrites
 [url "git@github.com:"]
 	insteadOf = "gh:"
@@ -78,26 +71,14 @@
 	pushInsteadOf = "gist:"
 	pushInsteadOf = "git://gist.github.com/"
 	pushInsteadOf = "https://gist.github.com/"
-
-
-# Any GitHub repo with my username should be checked out r/w by default
-# http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
-
 [url "git@github.com:soleo/"]
   insteadOf = "git://github.com/soleo/"
   insteadOf = "https://soleo@github.com/soleo/"
-
 [help]
 	autocorrect = 1
-# push easily. http://stackoverflow.com/a/23918418/89484
 [push]
+    # push easily. http://stackoverflow.com/a/23918418/89484
 	default = simple
-
-[mergetool "p4mergetool"]
-	trustExitCode = false
-	cmd = ~/Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
-[difftool "p4mergetool"]
-	cmd = ~/Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
 [credential]
 	helper = osxkeychain
 [filter "lfs"]
@@ -106,3 +87,10 @@
 	required = true
 [git-up "bundler"]
 	check = true
+[merge]
+	tool = gvimdiff
+	conflictstyle = diff3
+[difftool]
+	prompt = false
+[mergetool]
+    prompt = false
