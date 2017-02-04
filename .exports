@@ -24,3 +24,6 @@ export GOPATH=$HOME/work
 export PATH=$PATH:$GOPATH/bin
 export PATH="$PATH:$HOME/.yarn/bin"
 export JAVA_HOME=$(/usr/libexec/java_home)
+
+export PEAPOD_WORKSPACE="$HOME/projects"
+export PEAPOD_HOSTNAME="soleo.dev.peapod.com"

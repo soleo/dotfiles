@@ -1,6 +1,7 @@
 [user]
 	name = Xinjiang Shao
-	email = shaoxinjiang@gmail.com
+	useConfigOnly = true
+	signingkey = 2DD1140A
 [alias]
 	c = commit -am
 	up = pull --rebase --autostash
@@ -24,7 +25,7 @@
 		fi \
 	}; f"
 
-	# Add Upstream Repo to the fork because I keep forgeting about how to add the remote repo to my forks 
+	# Add Upstream Repo to the fork because I keep forgeting about how to add the remote repo to my forks
 	aup = "!func_add_upstream() { \
 		if [ $(printf \"%s\" \"$1\" | grep '^https' > /dev/null; printf $?) -eq 0 ]; then \
 			git remote add upstream $1; \
@@ -32,7 +33,10 @@
         	echo "It is not a valid repo URL"; \
 		fi \
 	}; func_add_upstream"
+[commit]
 
+    # https://help.github.com/articles/signing-commits-using-gpg/
+    gpgsign = true
 [core]
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes
