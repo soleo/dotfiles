@@ -62,12 +62,11 @@ antigen apply
 
 # Load default dotfiles
 source ~/.bash_profile
-
+source ~/.zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Automatically list directory contents on `cd`.
 auto-ls () { ls; }
 chpwd_functions=( auto-ls $chpwd_functions )
-
 
 # use ctrl+t to toggle autosuggestions(hopefully this wont be needed as
 # zsh-autosuggestions is designed to be unobtrusive)

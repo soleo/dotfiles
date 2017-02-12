@@ -60,7 +60,7 @@ curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/in
 # Install antigen
 git clone https://github.com/zsh-users/antigen.git ~/code/antigen
 # Install Autosuggestion
-git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh-autosuggestions
 
 # install iOS App Development Tools
 # avoid error in el capitan Ref http://stackoverflow.com/questions/30812777/cannot-install-cocoa-pods-after-uninstalling-results-in-error
