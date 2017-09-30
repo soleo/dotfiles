@@ -21,7 +21,9 @@ let mapleader=","
 
 " Local directories {{{
 set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
+if exists("&directory")
+    set directory=~/.vim/swaps
+endif
 if exists("&undodir")
 	set undodir=~/.vim/undo
 endif

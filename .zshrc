@@ -67,6 +67,7 @@ source ~/.zsh-autosuggestions/zsh-autosuggestions.zsh
 # Automatically list directory contents on `cd`.
 auto-ls () { ls; }
 chpwd_functions=( auto-ls $chpwd_functions )
+eval "$(direnv hook zsh)"
 
 # use ctrl+t to toggle autosuggestions(hopefully this wont be needed as
 # zsh-autosuggestions is designed to be unobtrusive)
@@ -102,6 +103,14 @@ export NVM_DIR="$HOME/.nvm"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
 # added by travis gem
 [ -f /Users/xinjiang/.travis/travis.sh ] && source /Users/xinjiang/.travis/travis.sh
+
+###-tns-completion-start-###
+if [ -f /Users/xinjiang/.tnsrc ]; then
+    source /Users/xinjiang/.tnsrc
+fi
+###-tns-completion-end-###
+

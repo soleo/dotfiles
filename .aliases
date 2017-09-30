@@ -14,6 +14,10 @@ alias rm="rm -i"
 # i <3 u cask
 alias cask='brew cask'
 
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
+alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
+
 # sometimes i forget
 alias where=which
 

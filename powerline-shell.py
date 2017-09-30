@@ -243,8 +243,8 @@ class DefaultColor:
     JOBS_FG = 39
     JOBS_BG = 238
 
-    CMD_PASSED_BG = 236
-    CMD_PASSED_FG = 15
+    CMD_PASSED_BG = 148
+    CMD_PASSED_FG = 0
     CMD_FAILED_BG = 161
     CMD_FAILED_FG = 15
 
@@ -657,11 +657,12 @@ def add_exit_code_segment(powerline):
     powerline.append(' %s ' % str(powerline.args.prev_error), fg, bg)
 
 
-add_exit_code_segment(powerline)
+
 def add_root_segment(powerline):
+
     root_indicators = {
         'bash': ' \\$ ',
-        'zsh': ' %# ',
+        'zsh': '\n $ ',
         'bare': ' $ ',
     }
     bg = Color.CMD_PASSED_BG

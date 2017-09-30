@@ -80,6 +80,7 @@ brew install aws-elasticbeanstalk
 brew install xctool
 brew install tcptrace
 brew install GraphicsMagick
+brew install libpcap
 # Install command line recording for terminal sessions
 brew install asciinema
 
